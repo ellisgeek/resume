@@ -1,0 +1,135 @@
+body{
+    font-family: "Fira Mono", monospace;
+    color: rgb(38, 38, 38);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #222;
+    margin: 0;
+}
+
+a{
+    color: rgb(38, 38, 38);
+    text-decoration: none;
+    font-weight: normal;
+}
+
+mark {
+    color: rgb(28, 173, 228);
+    background-color: inherit;
+}
+
+body > main{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 2em;
+    bottom: 2em;
+    width: 50em ;
+    padding: 4em;
+    box-shadow: 8px 8px 8px black;
+    background-color: white;
+}
+
+address {
+    font-style: normal;
+}
+
+address > mark{
+    border-right: solid 2px rgb(28, 173, 228);
+    min-width: 1px;
+}
+
+main > header{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 16px;
+}
+main > header > aside{
+    flex: 0 0 214px;
+    margin-right: 16px
+}
+
+h1, h2, h3, h4{
+    margin: 0;
+    text-transform: uppercase;
+}
+
+h2, h3{
+    font-size: 1.1em;
+}
+
+h1{
+    font-size: 3em;
+
+    color: rgb(28, 173, 228);
+    margin-left: -5px; /*compensate for strange font padding*/
+}
+
+h2{
+
+}
+
+h3{
+
+}
+
+h4{
+    font-size: 0.9em;
+    font-weight: normal;
+    color: rgb(127, 127, 127)
+}
+
+p{
+    margin: 0;
+}
+
+section[data-type='main']{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 16px;
+}
+section[data-type='main']:last-child{
+    margin-bottom: 0;
+}
+
+section[data-type='main'] > header{
+    flex: 0 0 214px;
+    text-align: right;
+    color: rgb(28, 173, 228);
+    border-right: solid 2px rgb(28, 173, 228);
+    padding-right: 8px;
+    margin-right: 8px;
+}
+
+section[data-type='main'] > main{
+
+    display: flex;
+    flex-direction: column;
+    flex: 8 0 0
+}
+
+
+
+section[data-type='cert']{
+    margin-bottom: 8px;
+}
+
+section[data-type='cert'] > header{
+    margin-bottom: 4px;
+}
+
+section[data-type='job']{
+
+}
+
+section[data-type='school']{
+
+}
+
+section[data-type='cert'] > header,
+section[data-type='job'] > header,
+section[data-type='school'] > header{
+
+}
