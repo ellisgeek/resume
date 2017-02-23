@@ -1,0 +1,114 @@
+//out: out/main.css, sourcemap: true, compress: false
+
+//variables
+bg = #222
+page = white
+font-color = rgb(38, 38, 38)
+accent = rgb(28, 173, 228)
+subheading = rgb(127, 127, 127)
+
+body
+    font-family "Fira Mono", monospace
+    color font-color
+    display flex
+    flex-direction row
+    align-items center
+    justify-content center
+    background-color bg
+    margin 0
+
+a
+    color font-color
+    text-decoration none
+    font-weight normal
+
+mark
+    color accent
+    background-color inherit
+
+body
+    & > main
+        display flex
+        flex-direction column
+        position absolute
+        top 2em
+        bottom 2em
+        width 50em
+        padding 4em
+        box-shadow 8px 8px 8px black
+        background-color page
+
+address
+    font-style normal
+    & > mark
+        border-right solid 2px accent
+        min-width 1px
+
+main
+    & > header
+        display flex
+        flex-direction row
+        margin-bottom 16px
+        & > aside
+            flex 0 0 214px
+            margin-right 16px
+
+h1, h2, h3, h4
+    margin 0
+    text-transform uppercase
+
+h2, h3
+    font-size 1.1em
+
+h1
+    font-size 3em
+    color accent
+    margin-left -5px
+
+h2
+    //placeholder
+
+h3
+    //placeholder
+
+h4
+    font-size 0.9em
+    font-weight normal
+    color subheading
+
+p
+    margin 0
+
+section[data-type='main']
+    display flex
+    flex-direction row
+    margin-bottom 16px
+    & > header
+        flex 0 0 214px
+        text-align right
+        color accent
+        border-right solid 2px accent
+        padding-right 8px
+        margin-right 8px
+    & > main
+        display flex
+        flex-direction column
+        flex 8 0 0
+    &:last-child
+        margin-bottom 0
+
+section[data-type='cert']
+    margin-bottom 8px
+    & > header
+        margin-bottom 4px
+
+section[data-type='job']
+    //placeholder
+
+section[data-type='school']
+        //placeholder
+
+section[data-type='cert'] > header,
+section[data-type='job'] > header,
+section[data-type='school'] > header
+    //placeholder
