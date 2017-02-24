@@ -7,15 +7,28 @@ font-color = rgb(38, 38, 38)
 accent = rgb(28, 173, 228)
 subheading = rgb(127, 127, 127)
 
+html, body, main
+    height 100%
+
 body
     font-family "Fira Mono", monospace
     color font-color
     display flex
-    flex-direction row
+    flex-direction column
     align-items center
     justify-content center
     background-color bg
     margin 0
+    & > main
+        display flex
+        flex-direction column
+        //flex 1 1 auto
+        max-width 50em
+        margin 2em
+        padding 4em
+        overflow-y auto
+        box-shadow 8px 8px 8px black
+        background-color page
 
 a
     color font-color
@@ -25,18 +38,6 @@ a
 mark
     color accent
     background-color inherit
-
-body
-    & > main
-        display flex
-        flex-direction column
-        position absolute
-        top 2em
-        bottom 2em
-        width 50em
-        padding 4em
-        box-shadow 8px 8px 8px black
-        background-color page
 
 address
     font-style normal
@@ -79,36 +80,36 @@ h4
 p
     margin 0
 
-section[data-type='main']
-    display flex
-    flex-direction row
-    margin-bottom 16px
-    & > header
-        flex 0 0 214px
-        text-align right
-        color accent
-        border-right solid 2px accent
-        padding-right 8px
-        margin-right 8px
-    & > main
+section
+    &[data-type='main']
         display flex
-        flex-direction column
-        flex 8 0 0
-    &:last-child
-        margin-bottom 0
+        flex-direction row
+        margin-bottom 16px
+        & > header
+            flex 0 0 214px
+            text-align right
+            color accent
+            border-right solid 2px accent
+            padding-right 8px
+            margin-right 8px
+        & > main
+            display flex
+            flex-direction column
+            flex 8 0 0
+        &:last-child
+            margin-bottom 0
+    &[data-type='cert']
+        margin-bottom 8px
+        & > header
+            margin-bottom 4px
 
-section[data-type='cert']
-    margin-bottom 8px
-    & > header
-        margin-bottom 4px
-
-section[data-type='job']
-    //placeholder
-
-section[data-type='school']
+    &[data-type='job']
         //placeholder
 
-section[data-type='cert'] > header,
-section[data-type='job'] > header,
-section[data-type='school'] > header
-    //placeholder
+    &[data-type='school']
+        //placeholder
+
+    &[data-type='cert'] > header,
+    &[data-type='job'] > header,
+    &[data-type='school'] > header
+        //placeholder
