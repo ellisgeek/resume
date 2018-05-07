@@ -40,13 +40,8 @@ address > mark {
   min-width: 1px;
 }
 main > header {
-  display: flex;
-  flex-direction: row;
   margin-bottom: 16px;
-}
-main > header > aside {
-  flex: 0 0 214px;
-  margin-right: 16px;
+  margin-left: 234px;
 }
 h1,
 h2,
@@ -94,9 +89,20 @@ section[data-type='main']:last-child {
   margin-bottom: 0;
 }
 section[data-type='cert'] {
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 section[data-type='cert'] > header {
   margin-bottom: 4px;
 }
-/*# sourceMappingURL=main.css.map */
+section[data-type='job'] {
+  margin-bottom: 16px;
+}
+section[data-type='job'] > header {
+  margin-bottom: 4px;
+}
+section[data-type='school'] {
+  margin-bottom: 16px;
+}
+section[data-type='school'] > header {
+  margin-bottom: 4px;
+}
