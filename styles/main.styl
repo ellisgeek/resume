@@ -47,12 +47,8 @@ address
 
 main
     & > header
-        display flex
-        flex-direction row
         margin-bottom 16px
-        & > aside
-            flex 0 0 214px
-            margin-right 16px
+        margin-left 234px
 
 h1, h2, h3, h4
     margin 0
@@ -99,15 +95,19 @@ section
         &:last-child
             margin-bottom 0
     &[data-type='cert']
-        margin-bottom 8px
+        margin-bottom 16px
         & > header
             margin-bottom 4px
 
     &[data-type='job']
-        //placeholder
+        margin-bottom 16px
+        & > header
+            margin-bottom 4px
 
     &[data-type='school']
-        //placeholder
+        margin-bottom 16px
+        & > header
+            margin-bottom 4px
 
     &[data-type='cert'] > header,
     &[data-type='job'] > header,
